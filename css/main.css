@@ -46,8 +46,6 @@ ul{
         margin: 0px;
         padding: 0px;
 
-        padding-top: 5em;
-
         background-color: var(--color-background);
         
         /* @font-face kit by Fonts2u (https://fonts2u.com) */ 
@@ -76,7 +74,8 @@ ul{
 
 
     width: 100%;
-    background-color: #c1df8b;
+    background-color:var(--color-success);
+    color:var(--color-text);
 
     margin: 0 auto;
     padding: 0 0em;
