@@ -4,7 +4,7 @@
 /* --- VARIABLES------------------------------------------ */
 /* ----------------------------------------------------------- */
 :root{
-    --logo-width: 150px;
+    --logo-width: 250px;
     --logo-height: 150px;
     --max-width: 1200px;
 }
@@ -95,8 +95,101 @@ ul{
     padding: 20px 0px;
 }
 .header__socials a{
+    color:var(--color-text);
     margin-left: 10px;
+    text-decoration: none;
 }
-.header__navbar{}
+
+.header__socials a:hover{
+    color: var(--color-background);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.header__navbar{
+    display: block;
+    width: 100%;
+    background-color: var(--color-text);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 0em;
+}
+
+.nav-logo-container{}
+.nav-logo-container a {
+    display: block;
+    width: var(--logo-width);
+}
+.nav-logo-container a img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-link{
+    letter-spacing: 1px;
+    color: #0c1633 ;
+    cursor: pointer;
+
+    margin-right: 2em;
+}
+/* ----------------------------------------------------------- */
+
+
+
 
 /* ----------------------------------------------------------- */
+/* --- Hero -------------------------------------------------- */
+/* ----------------------------------------------------------- */
+.hero { 
+
+    width: 100%;
+    height: calc(100vh - 183px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('/assets/images/cover_909cd27f-8eb3-4e9a-9cae-c5549009f6b5.png');
+    background-size: cover;
+    background-position: center center;
+}
+.hero .hero__title{
+    display: block;
+    position: relative;
+    text-justify: center;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 48px;
+}
+.hero .hero__button{
+    display: block;
+    background-color: var(--color-success);
+    color: white;
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.hero .hero__button:hover{
+    background-color: var(--color-background);
+    color: white;
+    transition: all 0.25s linear;
+}
+/* ----------------------------------------------------------- */
+
+
+
+
