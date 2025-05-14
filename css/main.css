@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto+Slab:400,700|Roboto:400,500,700,900&display=swap');
+
 
 /* ----------------------------------------------------------- */
 /* --- VARIABLES------------------------------------------ */
@@ -7,6 +9,8 @@
     --logo-width: 250px;
     --logo-height: 150px;
     --max-width: 1200px;
+    --max-width--content: 800px;
+    
 }
 /* ----------------------------------------------------------- */
 
@@ -31,6 +35,7 @@ ul{
 /* ----------------------------------------------------------- */
     .platzi {
         --color-background: #0c1633; 
+        --color-borders: #0c16331c; 
         --color-primary: #c1df8b;
         --color-secondary: #00B1B1;
         --color-accent: #FF4081; 
@@ -195,12 +200,51 @@ ul{
 /* ----------------------------------------------------------- */
 /* --- Hello ------------------------------------------------- */
 /* ----------------------------------------------------------- */
-.hello{}
-.hello__image{}
-.hello__image img{}
-.hello__content{}
-.hello__title{}
-.hello__description{}
+.hello{
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: rgb(207, 207, 207);
+    font-family: 'Roboto mono', monospace;
+}
+.hello__container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--max-width--content);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hello__image{
+    display: block;
+    width:  auto;
+}
+.hello__image img{
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.hello__content{
+    display: block;
+    padding: 1em;
+    padding-left: 2em;
+}
+.hello__title{
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin: 0px;
+}
+.hello__description{
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+}
 /* ----------------------------------------------------------- */
 
 
@@ -208,13 +252,78 @@ ul{
 /* ----------------------------------------------------------- */
 /* --- Projects ---------------------------------------------- */
 /* ----------------------------------------------------------- */
-.projects{}
-.projects__title{}
-.projects__list{}
-.projects__item{}
-.projects__item-title{}
-.projects__item-description{}
-.projects__item-link{}
+.projects{
+    display: block;
+    width: 100%;
+    background-color: white;
+
+    box-sizing: border-box;
+    padding: 2em 0em;
+    padding-bottom: 10em;
+
+    font-family: 'Roboto mono', monospace;
+}
+.projects__title{
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--color-background);
+
+    padding: 1em;
+    padding-bottom: 2em;
+    border-bottom: 2px solid var(--color-borders);
+
+    width: 100%;
+    max-width: var(--max-width--content);
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+}
+.projects__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;  
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 100%;
+    max-width: var(--max-width--content);
+    margin: 0 auto;
+}
+.projects__item{
+    display: block;
+}
+.projects__item-title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.projects__item-description{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin: 0px;
+    text-align:left;
+}
+.projects__item-link{
+    font-size: 12px;
+    padding-top: 2em;
+    letter-spacing: 1px;
+
+}
 /* ----------------------------------------------------------- */
 
 
@@ -222,6 +331,95 @@ ul{
 /* ----------------------------------------------------------- */
 /* --- Contact ----------------------------------------------- */
 /* ----------------------------------------------------------- */
-.contact{}
-.contact{}
+.contact{
+    display: block;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.97);
+    box-sizing: border-box;
+    padding: 2em 0em;
+}
+.contact__container{
+    width: 100%;
+    max-width: calc(0.85*var(--max-width));
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 1em;
+}
+.contact__card{ 
+    display: grid;
+  grid-template-columns: 130px 300px; 
+  grid-template-rows: 1fr; 
+  gap: 20px 20px; 
+  grid-template-areas: 
+    "Area-Image Area-Title"
+    "Area-Image Area-Text"; 
+    font-family: 'Roboto mono', monospace;
+
+}
+.contact__card-image{
+    display: block;
+    width: 130px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    grid-area: Area-Image;
+}
+.contact__card-title{
+    font-size: 16px;   
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin: 1em 0em;
+    text-align: center;
+    color: var(--color-background);
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-background);
+    grid-area: Area-Title;
+    width: fit-content;
+}
+.contact__card-description{
+    font-size: 14px;   
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    color: var(--color-background);
+    text-align: left;
+    grid-area: Area-Text;
+}
+/* ----------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------- */
+/* --- Contact ----------------------------------------------- */
+/* ----------------------------------------------------------- */
+.footer__nv1{
+    display: block;
+    width: 100%;
+    background-color: var(--color-success);
+    color: var(--color-text);
+    box-sizing: border-box;
+    padding: 1em 0em;
+}
+.footer__nv2{
+    display: block;
+    width: 100%;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    box-sizing: border-box;
+    padding: 1em 0em;
+}
+.footer__nv2 h1{
+    font-family: 'Roboto mono', monospace;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
 /* ----------------------------------------------------------- */
